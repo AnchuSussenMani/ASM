@@ -1,0 +1,56 @@
+
+
+
+
+
+
+CREATE TABLE Designation1 AS SELECT DISTINCT Emp_Job
+AS Desn_Name FROM Employee
+
+
+ALTER TABLE Designation1 ADD (Desn_Id NUMBER,Desn_Low_Salary NUMBER, Desn_High_Salary NUMBER,
+Desn_Grade CHAR(5) )
+
+alter table employee drop column EMP_JOB
+
+
+UPDATE DESIGNATION1 SET Desn_Id=1 WHERE Desn_Name ='Accountant'
+UPDATE DESIGNATION1 SET Desn_Id=2 WHERE Desn_Name ='Analyst'
+UPDATE DESIGNATION1 SET Desn_Id=3 WHERE Desn_Name ='Designer'
+UPDATE DESIGNATION1 SET Desn_Id=4 WHERE Desn_Name ='Engineer'
+UPDATE DESIGNATION1 SET Desn_Id=5 WHERE Desn_Name ='Inspector'
+UPDATE DESIGNATION1 SET Desn_Id=6 WHERE Desn_Name ='Manager'
+UPDATE DESIGNATION1 SET Desn_Id=7 WHERE Desn_Name ='Planner'
+UPDATE DESIGNATION1 SET Desn_Id=8 WHERE Desn_Name ='Salesman'
+UPDATE DESIGNATION1 SET Desn_Id=9 WHERE Desn_Name ='Salesman'
+
+
+
+ALTER TABLE EMPLOYEE ADD (Desn_Id NUMBER  null)
+//ALTER TABLE EMPLOYEE ADD CONSTRAINT FK_DESN FOREIGN KEY(DESN_ID) REFERENCES DESIGNATION1(DESN_ID)
+
+
+
+ALTER TABLE EMPLOYEE ADD(Emp_Comm NUMBER(8,2) NULL)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
